@@ -1,6 +1,19 @@
-# Track-Series
+# Introducere
+Acesta este un proiect de exemplu pentru utilizarea Vue.js pentru administrarea
+unei liste care in acest caz contine valorile ratelor de schimb valutar.
 
-- Scop site: Avem o lista de prieteni si o lista de seriale (este permisa modifiarea listelor). O persoana poate selecta serialele pe care le urmareste si episodul la care a ramas. In plus, poate vedea la ce episod a ramas fiecare dintre prietenii sai.
+# Instalare
+Pentru instalare se poate downloada zip cu proiectul sau clona via git.
 
-- Am realizat partea de front-end a acestui site. Partea de back-end a fost realizata de laborantul de la aceasta materie, intrucat aceasta nu facea obiectul cursului.
+Apoi trebuie instalate dependintele
 
+npm install
+
+# Rulare
+Pentru rulare se utilizeaza
+
+node index.js
+
+si apoi se acceseaza din browser:
+
+http://localhost:3000/

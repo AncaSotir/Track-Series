@@ -1,0 +1,107 @@
+
+<html lang="ro">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tracker</title>
+
+  <link href="style/main.css" rel="stylesheet">
+  <link href="style/tracker.css" rel="stylesheet">
+  <link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      <img src="images/action.png" alt="logo">
+    </div>
+
+    <div class="header">
+      <h1>Track Series</h1>
+      <nav class="mainmenu">
+        <a href="acasa.html">Acasa</a>
+        <a href="prieteni.html">Prieteni</a>
+        <a href="seriale.html">Seriale</a>
+        <a href="tracker.html">Tracker</a>
+      </nav>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li><a href="acasa.html">Acasa</a></li>
+        <li><a>Tabele</a>
+          <ul>
+            <li><a href="prieteni.html">Prieteni</a></li>
+            <li><a href="seriale.html">Seriale</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content" id="vue">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Nume</th>
+            <th>Serial</th>
+            <th>Sezon</th>
+            <th>Ultimul Episod Vazut</th>
+            <th>Actiuni</th>
+          </tr>
+        </thead>
+
+        <tbody id="tabel">
+          <tr v-for="(el,idx) in tracker">
+            <td>{{el.nume}}</td>
+            <td>{{el.titlu}}</td>
+            <td>{{el.sez}}</td>
+            <td>{{el.ep}}</td>
+            <td>
+              <button v-on:click="minus_sez(idx)">-1 sez</button>
+              <button v-on:click="minus_ep(idx,5)">-5 ep</button>
+              <button v-on:click="minus_ep(idx,1)">-1 ep</button>
+              <button v-on:click="plus_ep(idx,1)">+1 ep</button>
+              <button v-on:click="plus_ep(idx,5)">+5 ep</button>
+              <button v-on:click="plus_sez(idx)">+1 sez</button>
+              <button v-on:click="delete_tracker(idx)">Sterge</button>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <hr>
+
+        <select id="select_prieten">
+          <option disabled hidden selected>Selecteaza un prieten</option>
+        </select>
+
+        <select id="select_serial">
+          <option disabled hidden selected>Selecteaza un serial</option>
+        </select>
+
+        <br>
+
+        <button v-on:click="add_tracker">Adauga</button>
+        <button v-On:click="searchByPrieten">Vezi ce urmareste prietenul selectat</button>
+        <button v-on:click="searchBySerial">Vezi cine urmareste serialul selectat</button>
+        <button v-on:click="resetTracker">Reseteaza tabelul</button>
+
+
+  </div>
+  </div>
+
+</body>
+
+</html>

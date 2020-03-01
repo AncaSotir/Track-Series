@@ -1,0 +1,105 @@
+
+<html lang="ro">
+
+<head>
+  <meta charset="utf-8">
+  <title>Seriale</title>
+
+  <link href="style/main.css" rel="stylesheet">
+  <link href="style/seriale.css" rel="stylesheet">
+  <link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      <img src="images/action.png" alt="logo">
+    </div>
+
+    <div class="header">
+      <h1>Track Series</h1>
+      <nav class="mainmenu">
+        <a href="acasa.html">Acasa</a>
+        <a href="prieteni.html">Prieteni</a>
+        <a href="seriale.html">Seriale</a>
+        <a href="tracker.html">Tracker</a>
+      </nav>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li><a href="acasa.html">Acasa</a></li>
+        <li><a>Tabele</a>
+          <ul>
+            <li><a href="prieteni.html">Prieteni</a></li>
+            <li><a href="seriale.html">Seriale</a></li>
+            <li><a href="tracker.html">Tracker</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content" id="vue">
+
+      <button  class="toggle" v-on:click="toggle_edit" >
+        Turn ON edit mode
+      </button>
+
+    <div id="edit_mode">
+      <table>
+
+        <thead>
+          <tr>
+            <th>Titlu</th>
+            <th>Numar Sezoane</th>
+            <th>Numar Episoade</th>
+            <th>Actiuni</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr v-for="(el,idx) in seriale">
+            <td>{{el.titlu}}</td>
+            <td>{{el.nsez}}</td>
+            <td><span v-for="ep in el.nep">{{ep}} </span></td>
+            <td><button v-on:click="edit_serial(idx)">Editeaza</button> <button v-on:click="delete_serial(idx)">Sterge</button></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <hr>
+
+        <label for="titlu_serial">Titlu:</label><br>
+        <input id="titlu_serial" v-model="input_seriale.titlu" type="text" placeholder="Titlu Serial">
+        <br>
+        <label for="nr_sezoane">Sezoane:</label><br>
+        <input id="nr_sezoane" v-model="input_seriale.nsez" type="text" placeholder="Numar Sezoane">
+        <br>
+        <label for="nr_episoade">Episoade:</label><br>
+        <input id="nr_episoade" v-model="input_seriale.nep" type="text" placeholder="Numar Episoade">
+        <br>
+        <button id="commit" v-on:click="add_serial">Adauga</button>
+
+    </div>
+
+    <div id="shows_mode" class="flex-container" >
+    </div>
+
+
+  </div>
+
+</div>
+
+
+</body>
+
+</html>

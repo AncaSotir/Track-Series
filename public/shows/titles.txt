@@ -1,0 +1,40 @@
+Arrow 7 23,23,23,23,23,23,9 nu
+Black Mirror 4 3,4,6,6 nu
+Bones 12 22,21,15,26,22,23,13,24,24,22,22,12 da
+Breaking Bad 5 7,13,13,13,16 da
+Brooklyn Nine-Nine 5 22,23,23,22,22 nu
+Daredevil 3 13,13,13 da
+Dexter 8 12,12,12,12,12,12,12,12 da
+Friends 10 24,24,25,24,24,25,24,24,24,18 da
+Game of Thrones 7 10,10,10,10,10,10,10 nu
+Gotham 5 22,22,22,22,1 nu
+Grey's Anatomy 15 9,27,25,17,24,24,22,24,24,24,25,24,24,24,8 nu
+Hackerville 1 6 da
+Hannibal 3 13,13,13 da
+House 8 22,24,24,16,24,21,23,22 da
+House of Cards 6 13,13,13,13,13,8 da
+How I Met Your Mother 9 22,22,20,24,24,24,24,24,24 da
+How To Get Away With Murder 5 15,15,15,15,8 nu
+Lie to Me 3 13,22,13 da
+Lucifer 3 13,18,26 nu
+Modern Family 10 24,24,24,24,24,24,22,22,22,10 nu
+Mr. Robot 3 10,12,10 nu
+Narcos 3 10,10,10 da
+Outlander 4 16,13,13,9 nu
+Prison Break 5 22,22,13,24,9 da
+Sherlock 4 3,3,3,3 nu
+Silicon Valley 5 8,10,10,10,8 nu
+Siren 1 10 nu
+Stranger Things 2  8,9 nu
+Suits 8 12,16,16,16,16,16,16,10 nu
+Taboo 1 8 nu
+The Big Bang Theory 12 17,23,23,24,24,24,24,24,24,24,24,11 nu
+The Flash 5 23,23,23,23,9 nu
+The Office 9 6,22,25,19,28,26,26,24,25 da
+The Terror 1 10 nu
+The Walking Dead 9 6,13,16,16,16,16,16,16,8 nu
+True Detective 2 8,8 nu
+Two and a Half Men 12 24,24,24,24,19,24,22,16,24,23,22,16 da
+Vikings 5 9,10,10,20,16 nu
+Westworld 2 10,10 nu
+Young Sheldon 2 22,11 nu

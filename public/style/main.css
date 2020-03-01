@@ -1,0 +1,133 @@
+/*
+https://coolors.co/05668d-000f08-ec4e20-eaf2e3-ffae03
+albastru: #05668d
+negru: #000f08
+portocaliu-rosu: #ec4e20
+bej: #eaf2e3
+portocaliu-galben: #ffae03
+*/
+
+.container {
+  height: 100%;
+  display: grid;
+}
+
+@media screen and (min-width: 500px){
+  .container {
+    grid-template-rows: 20% auto;
+    grid-template-columns: 180px auto;
+    grid-template-areas:
+    'logo header'
+    'sidebar content';
+  }
+}
+@media screen and (max-width: 500px){
+  .container {
+    grid-template-rows: 20% auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    'header'
+    'content';
+  }
+  .logo { display: none !important; }
+  .sidebar { display: none !important; }
+}
+
+.logo {
+  grid-area: logo;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  background-color: #000f08;
+}
+
+.header {
+  grid-area: header;
+  background-image: linear-gradient(to right, #000f08, #05668d 50%);
+  white-space: nowrap;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-image: linear-gradient(#ec4e20, #ffae03);
+  color: #000f08;
+  font-size: 20;
+  font-weight: bold;
+}
+
+.content {
+  grid-area: content;
+  background-image: linear-gradient(white, rgba(121, 90, 87, 0.2));
+}
+
+
+.logo img {
+  height: 15vh;
+  width: auto;
+  justify-self: center;
+  align-self: center;
+  border-radius: 15%
+}
+
+.header h1 {
+  color: white;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 5vh;
+  text-shadow: 2px 3px #05668d;
+  margin-left: 5px;
+}
+
+ul {
+  padding-left: 30px;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+li > ul > li {
+  margin-top:10px;
+  margin-bottom: 0px;
+}
+
+.sidebar a {
+  color: #000f08;
+}
+
+.sidebar li > a:hover {
+  background-color: #ffae03;
+  transition: 0.5s;
+  border-radius: 5%;
+}
+
+.mainmenu {
+  margin-left: 5px;
+}
+
+.mainmenu a {
+  background-color: #05668d;
+  border: 1px solid #eaf2e3;
+  padding: 5px;
+  color: #eaf2e3;
+}
+.mainmenu a:hover {
+  background-color: #eaf2e3;
+  color: #000f08;
+  transition: 0.5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar li > ul {
+  transition: 0.5s;
+  display: none;
+}
+
+.sidebar li:hover > ul {
+  transition: 0.5s;
+  display: block;
+}
